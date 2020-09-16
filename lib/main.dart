@@ -21,7 +21,7 @@ class Home extends StatelessWidget {
             Icon(
               Icons.live_tv,
               size: 100.0,
-              color: Colors.red[700],
+              color: Colors.pink[700],
             ),
             RaisedButton(
               onPressed: () { print('Zidan er button e shomossa!');},
