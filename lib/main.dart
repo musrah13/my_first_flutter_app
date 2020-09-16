@@ -15,19 +15,31 @@ class Home extends StatelessWidget {
         title: Text("Zidan's App"),
         centerTitle: true,
       ),
-      body: Container(
-        margin: EdgeInsets.fromLTRB(50, 30, 0, 0),
-        padding: EdgeInsets.symmetric(vertical: 20, horizontal: 30),
-        decoration: BoxDecoration(
-          border: Border.all(color: Colors.deepPurpleAccent, width: 10),
-          color: Colors.blueGrey[700],
-        ),
-        child: Text(
-          'Hello maitey!',
-          style: TextStyle(
-            fontSize: 40,
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[
+          Text(
+            'I am a text!',
           ),
-        ),
+          RaisedButton(
+            onPressed: () {},
+            color: Colors.cyan,
+            child: Text(
+              'Button 1'
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.all(30),
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.pink, width: 2),
+              color: Colors.amber[100],
+            ),
+            child: Text(
+              'Container 1',
+            ),
+          ),
+        ],
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.amber,
