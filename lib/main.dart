@@ -15,20 +15,54 @@ class Home extends StatelessWidget {
         title: Text("Zidan's App"),
         centerTitle: true,
       ),
-      body: Center(
-        child: Container(
-          //margin: EdgeInsets.fromLTRB(50, 30, 0, 0),
-          padding: EdgeInsets.symmetric(vertical: 20, horizontal: 30),
-          decoration: BoxDecoration(
-            border: Border.all(color: Colors.deepPurpleAccent, width: 10),
-            color: Colors.blueGrey[700],
-          ),
-          child: Text(
-            'Hello maitey!',
-            style: TextStyle(
-              fontSize: 40,
+      body: Container(
+        margin: EdgeInsets.fromLTRB(0, 10, 0, 0),
+        child: Row(
+          children: <Widget>[
+            Expanded(
+              child: Image.asset('assets/lfc-2.jpg'),
+              flex: 4,
             ),
-          ),
+            Expanded(
+              flex: 3,
+              child: Container(
+                padding: EdgeInsets.all(33),
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.deepPurpleAccent, width: 5),
+                  color: Colors.red[700],
+                ),
+                child: Text(
+                  '1',
+                ),
+              ),
+            ),
+            Expanded(
+              flex: 2,
+              child: Container(
+                padding: EdgeInsets.all(33),
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.teal, width: 5),
+                  color: Colors.yellow[700],
+                ),
+                child: Text(
+                  '2',
+                ),
+              ),
+            ),
+            Expanded(
+              flex: 1,
+              child: Container(
+                padding: EdgeInsets.all(33),
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.orange, width: 5),
+                  color: Colors.blue[700],
+                ),
+                child: Text(
+                  '3',
+                ),
+              ),
+            ),
+          ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
