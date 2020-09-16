@@ -15,17 +15,19 @@ class Home extends StatelessWidget {
         title: Text("Zidan's App"),
         centerTitle: true,
       ),
-      body: Container(
-        margin: EdgeInsets.fromLTRB(50, 30, 0, 0),
-        padding: EdgeInsets.symmetric(vertical: 20, horizontal: 30),
-        decoration: BoxDecoration(
-          border: Border.all(color: Colors.deepPurpleAccent, width: 10),
-          color: Colors.blueGrey[700],
-        ),
-        child: Text(
-          'Hello maitey!',
-          style: TextStyle(
-            fontSize: 40,
+      body: Center(
+        child: Container(
+          //margin: EdgeInsets.fromLTRB(50, 30, 0, 0),
+          padding: EdgeInsets.symmetric(vertical: 20, horizontal: 30),
+          decoration: BoxDecoration(
+            border: Border.all(color: Colors.deepPurpleAccent, width: 10),
+            color: Colors.blueGrey[700],
+          ),
+          child: Text(
+            'Hello maitey!',
+            style: TextStyle(
+              fontSize: 40,
+            ),
           ),
         ),
       ),
