@@ -15,44 +15,18 @@ class Home extends StatelessWidget {
         title: Text("Zidan's App"),
         centerTitle: true,
       ),
-      body: Center(
-        child: Column(
-          children: <Widget>[
-            Icon(
-              Icons.live_tv,
-              size: 100.0,
-              color: Colors.pink[700],
-            ),
-            RaisedButton(
-              onPressed: () { print('Zidan er button e shomossa!');},
-              child: Text(
-                'Play',
-                style: TextStyle(
-                  color: Colors.blue,
-                  fontSize: 50.0,
-                ),
-              ),
-              color: Colors.amber,
-            ),
-            FlatButton.icon(
-              onPressed: () {},
-              label: Text(
-                'Another Button'
-              ),
-              icon: Icon(
-                Icons.mail,
-              ),
-              color: Colors.pink,
-            ),
-            IconButton(
-              onPressed: () {},
-              icon: Icon(
-                Icons.airplanemode_active,
-                size: 66.0,
-                color: Colors.teal,
-              ),
-            ),
-          ]
+      body: Container(
+        margin: EdgeInsets.fromLTRB(50, 30, 0, 0),
+        padding: EdgeInsets.symmetric(vertical: 20, horizontal: 30),
+        decoration: BoxDecoration(
+          border: Border.all(color: Colors.deepPurpleAccent, width: 10),
+          color: Colors.blueGrey[300],
+        ),
+        child: Text(
+          'Hello maitey!',
+          style: TextStyle(
+            fontSize: 40,
+          ),
         ),
       ),
       floatingActionButton: FloatingActionButton(
