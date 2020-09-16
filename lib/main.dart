@@ -15,9 +15,9 @@ class Home extends StatelessWidget {
         title: Text("Zidan's App"),
         centerTitle: true,
       ),
-      body: Row(
+      body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           Text(
             'I am a text!',
