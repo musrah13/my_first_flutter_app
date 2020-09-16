@@ -20,7 +20,7 @@ class Home extends StatelessWidget {
         padding: EdgeInsets.symmetric(vertical: 20, horizontal: 30),
         decoration: BoxDecoration(
           border: Border.all(color: Colors.deepPurpleAccent, width: 10),
-          color: Colors.blueGrey[300],
+          color: Colors.blueGrey[700],
         ),
         child: Text(
           'Hello maitey!',
