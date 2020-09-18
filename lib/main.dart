@@ -10,7 +10,7 @@ void main() {
 class Clubs extends StatelessWidget {
   Widget generateCard(FootballClub fc){
     return Container(
-      margin: EdgeInsets.fromLTRB(0, 0, 0, 20),
+      margin: EdgeInsets.fromLTRB(0, 0, 0, 13),
       child: Card(
         shadowColor: Colors.purple[900],
         elevation: 10,
