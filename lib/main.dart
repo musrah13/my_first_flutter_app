@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:my_first_flutter_app/footballClub.dart';
+import 'footballClub.dart';
+import 'football_card.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -8,41 +9,6 @@ void main() {
 }
 
 class Clubs extends StatelessWidget {
-  Widget generateCard(FootballClub fc){
-    return Container(
-      margin: EdgeInsets.fromLTRB(0, 0, 0, 13),
-      child: Card(
-        shadowColor: Colors.purple[900],
-        elevation: 10,
-        child: Padding(
-          padding: const EdgeInsets.all(12.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: <Widget>[
-              Text(
-                fc.clubName,
-                style: TextStyle(
-                  letterSpacing: 2,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 32,
-                  color: Colors.purple[900],
-                ),
-              ),
-              SizedBox(height: 10),
-              Text(
-                '-' + fc.manager,
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20,
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-  
   List<FootballClub> fc = [
     FootballClub(manager: 'Jurgen Klopp', clubName: 'Liverpool FC'),
     FootballClub(manager: 'Hansi Flick', clubName: 'Bayern Munich'),
@@ -66,7 +32,7 @@ class Clubs extends StatelessWidget {
         padding: EdgeInsets.all(20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: fc.map((fc) => generateCard(fc)).toList(),
+          children: fc.map((fc) => FootballClubCard(fc: fc)).toList(),
         ),
       ),
     );
