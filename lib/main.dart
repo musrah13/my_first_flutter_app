@@ -8,13 +8,16 @@ void main() {
   ));
 }
 
-class Clubs extends StatelessWidget {
-  List<FootballClub> fc = [
+class Clubs extends StatefulWidget {
+  @override
+  _ClubsState createState() => _ClubsState();
+}
+
+class _ClubsState extends State<Clubs> {
+  List<FootballClub> fcs = [
     FootballClub(manager: 'Jurgen Klopp', clubName: 'Liverpool FC'),
     FootballClub(manager: 'Hansi Flick', clubName: 'Bayern Munich'),
     FootballClub(manager: 'Pep Guardiola', clubName: 'Manchester City'),
-    FootballClub(manager: 'Andreas Pirlo', clubName: 'Juventus'),
-    FootballClub(manager: 'Zinedin Zidane', clubName: 'Real Madrid'),
   ];
 
   @override
@@ -32,7 +35,14 @@ class Clubs extends StatelessWidget {
         padding: EdgeInsets.all(20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: fc.map((fc) => FootballClubCard(fc: fc)).toList(),
+          children: fcs.map((fc) => FootballClubCard(
+            fc: fc,
+            delete: (){
+              setState((){
+                fcs.remove(fc);
+              });
+            },
+          )).toList(),
         ),
       ),
     );

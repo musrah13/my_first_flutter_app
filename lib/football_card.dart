@@ -4,12 +4,13 @@ import 'footballClub.dart';
 class FootballClubCard extends StatelessWidget {
 
   final FootballClub fc;
-  FootballClubCard({this.fc});
+  final Function delete;
+
+  FootballClubCard({this.fc, this.delete});
 
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: EdgeInsets.fromLTRB(0, 0, 0, 25),
       shadowColor: Colors.purple[900],
       elevation: 10,
       child: Padding(
@@ -33,6 +34,11 @@ class FootballClubCard extends StatelessWidget {
                 fontWeight: FontWeight.bold,
                 fontSize: 20,
               ),
+            ),
+            FlatButton.icon(
+                onPressed: delete,
+                icon: Icon(Icons.delete),
+                label: Text('Delete'),
             ),
           ],
         ),
