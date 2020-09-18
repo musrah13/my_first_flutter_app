@@ -31,9 +31,7 @@ class Clubs extends StatelessWidget {
         padding: EdgeInsets.all(20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: fc.map((fc){
-            return Text('${fc.clubName} - ${fc.manager}');
-          }).toList(),
+          children: fc.map((fc) => Text('${fc.clubName} - ${fc.manager}')).toList(),
         ),
       ),
     );
