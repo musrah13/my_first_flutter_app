@@ -6,7 +6,15 @@ void main() {
   ));
 }
 
-class LfcLegendId extends StatelessWidget {
+class LfcLegendId extends StatefulWidget {
+  @override
+  _LfcLegendIdState createState() => _LfcLegendIdState();
+}
+
+class _LfcLegendIdState extends State<LfcLegendId> {
+
+  int rating = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -166,13 +174,38 @@ class LfcLegendId extends StatelessWidget {
                 letterSpacing: 3,
               ),
             ),
+            SizedBox(height: 20,),
+            Text(
+              'Give your Rating',
+              style: TextStyle(
+                color: Colors.grey,
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+                letterSpacing: 3,
+              ),
+            ),
+            SizedBox(height: 10,),
+            Text(
+              '$rating/10',
+              style: TextStyle(
+                color: Colors.amber[600],
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+                letterSpacing: 3,
+              ),
+            ),
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          setState(() {
+            if(rating < 10)
+              rating += 1;
+          });
+        },
         child: Icon(
-          Icons.equalizer,
+          Icons.add,
           size: 40,
           color: Colors.amber[600],
         ),
